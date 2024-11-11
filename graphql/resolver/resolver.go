@@ -8,4 +8,12 @@ import "github.com/brettski/brettskiql/graphql/model"
 
 type Resolver struct {
 	todos []*model.Todo
+	// users []*model.User
+	users map[string]*model.User
+}
+
+func NewResolver() *Resolver {
+	return &Resolver{
+		users: make(map[string]*model.User),
+	}
 }

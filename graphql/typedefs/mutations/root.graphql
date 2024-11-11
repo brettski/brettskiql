@@ -1,3 +1,7 @@
 type Mutation {
+  "Add a new todo item"
   createTodo(input: NewTodo!): Todo!
+
+  "Add a new user"
+  createUser(input: NewUser!): User!
 }

@@ -1,5 +1,4 @@
-type User {
-  id: ID!
+input NewUser {
   name: String!
   email: String
 }
