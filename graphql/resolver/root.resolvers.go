@@ -12,7 +12,6 @@ import (
 
 	graphql1 "github.com/brettski/brettskiql/graphql"
 	"github.com/brettski/brettskiql/graphql/model"
-	"github.com/brettski/brettskiql/transform"
 )
 
 // CreateTodo is the resolver for the createTodo field.
@@ -45,10 +44,11 @@ func (r *queryResolver) Todos(ctx context.Context) ([]*model.Todo, error) {
 }
 
 // Users is the resolver for the users field.
-func (r *queryResolver) Users(ctx context.Context) ([]*model.User, error) {
+func (r *queryResolver) Users(ctx context.Context) (*model.UsersQuery, error) {
 	// return r.users, nil
 	// return []*model.User{}, nil
-	return transform.MapValuesToSlice(r.users), nil
+	//return transform.MapValuesToSlice(r.users), nil
+	return &model.UsersQuery{}, nil
 }
 
 // Mutation returns graphql1.MutationResolver implementation.

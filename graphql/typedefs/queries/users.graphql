@@ -1,0 +1,6 @@
+type UsersQuery {
+  "all users"
+  all: [User!]!
+  "partner by id"
+  user(id: ID!): User
+}

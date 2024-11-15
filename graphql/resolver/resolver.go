@@ -8,7 +8,6 @@ import "github.com/brettski/brettskiql/graphql/model"
 
 type Resolver struct {
 	todos []*model.Todo
-	// users []*model.User
 	users map[string]*model.User
 }
 

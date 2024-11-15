@@ -105,3 +105,9 @@ models:
     fields:
       user:
         resolver: true
+  UsersQuery:
+    fields:
+      all:
+        resolver: true
+      user:
+        resolver: true

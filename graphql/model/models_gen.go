@@ -17,3 +17,10 @@ type User struct {
 	Name  string  `json:"name"`
 	Email *string `json:"email"`
 }
+
+type UsersQuery struct {
+	// all users
+	All []*User `json:"all"`
+	// partner by id
+	User *User `json:"user"`
+}
