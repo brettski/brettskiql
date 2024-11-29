@@ -12,7 +12,27 @@ type Resolver struct {
 }
 
 func NewResolver() *Resolver {
+	users := SeedUsers()
 	return &Resolver{
-		users: make(map[string]*model.User),
+		// users: make(map[string]*model.User),
+		users: users,
 	}
+}
+
+func SeedUsers() map[string]*model.User {
+
+	users := map[string]*model.User{
+		"U2112": {
+			ID:    "U2112",
+			Name:  "brettski",
+			Email: func() *string { s := "brettski@example.com"; return &s }(),
+		},
+		"U111": {
+			ID:    "U111",
+			Name:  "brett",
+			Email: func() *string { s := "brett@example.com"; return &s }(),
+		},
+	}
+
+	return users
 }
