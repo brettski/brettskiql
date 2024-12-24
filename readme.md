@@ -14,6 +14,7 @@ Used a top folder name of `graphql` instead of the default `graph`. This created
 
 ## Structure
 
+```text
 graphql/
   |
   model/
@@ -25,3 +26,10 @@ graphql/
       inputs/
     mutations/
     queries/
+```
+
+## Database
+
+Database hosted on [Neon](https://neon.tech).
+
+[Goose](https://github.com/pressly/goose) is being used to handle database migrations.
