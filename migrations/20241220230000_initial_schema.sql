@@ -56,7 +56,7 @@ CREATE TABLE board_game (
 )
 
 -- +goose Down
-DROP TABLE users;
+DROP TABLE user;
 DROP TABLE book;
 DROP TABLE author;
 DROP TABLE board_game;
