@@ -33,14 +33,30 @@ CREATE TABLE author (
   pen_names VARCHAR(100)[],
   birth_date DATE,
   death_date DATE,
+  url_image TEXT,
   url_reference TEXT,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
 )
 
-
+CREATE TABLE board_game (
+  id SERIAL PRIMARY KEY,
+  title VARCHAR(255),
+  description TEXT,
+  year_published INTEGER,
+  min_players INTEGER,
+  max_players INTEGER,
+  min_play_time INTEGER,
+  max_play_time INTEGER,
+  url_image TEXT,
+  url_reference TEXT,
+  -- publisher,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+)
 
 -- +goose Down
 DROP TABLE users;
 DROP TABLE book;
 DROP TABLE author;
+DROP TABLE board_game;
