@@ -7,7 +7,7 @@ package resolver
 import (
 	"context"
 
-	graphql1 "github.com/brettski/brettskiql/graphql"
+	"github.com/brettski/brettskiql/graphql"
 	"github.com/brettski/brettskiql/graphql/model"
 )
 
@@ -20,6 +20,6 @@ func (r *todoResolver) User(ctx context.Context, obj *model.Todo) (*model.User, 
 }
 
 // Todo returns graphql1.TodoResolver implementation.
-func (r *Resolver) Todo() graphql1.TodoResolver { return &todoResolver{r} }
+func (r *Resolver) Todo() graphql.TodoResolver { return &todoResolver{r} }
 
 type todoResolver struct{ *Resolver }

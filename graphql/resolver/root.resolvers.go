@@ -10,7 +10,7 @@ import (
 	"fmt"
 	"math/big"
 
-	graphql1 "github.com/brettski/brettskiql/graphql"
+	"github.com/brettski/brettskiql/graphql"
 	"github.com/brettski/brettskiql/graphql/model"
 )
 
@@ -52,10 +52,10 @@ func (r *queryResolver) Users(ctx context.Context) (*model.UsersQuery, error) {
 }
 
 // Mutation returns graphql1.MutationResolver implementation.
-func (r *Resolver) Mutation() graphql1.MutationResolver { return &mutationResolver{r} }
+func (r *Resolver) Mutation() graphql.MutationResolver { return &mutationResolver{r} }
 
 // Query returns graphql1.QueryResolver implementation.
-func (r *Resolver) Query() graphql1.QueryResolver { return &queryResolver{r} }
+func (r *Resolver) Query() graphql.QueryResolver { return &queryResolver{r} }
 
 type mutationResolver struct{ *Resolver }
 type queryResolver struct{ *Resolver }

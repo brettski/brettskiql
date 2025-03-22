@@ -7,7 +7,7 @@ package resolver
 import (
 	"context"
 
-	graphql1 "github.com/brettski/brettskiql/graphql"
+	"github.com/brettski/brettskiql/graphql"
 	"github.com/brettski/brettskiql/graphql/model"
 	"github.com/brettski/brettskiql/transform"
 )
@@ -24,6 +24,6 @@ func (r *usersQueryResolver) User(ctx context.Context, obj *model.UsersQuery, id
 }
 
 // UsersQuery returns graphql1.UsersQueryResolver implementation.
-func (r *Resolver) UsersQuery() graphql1.UsersQueryResolver { return &usersQueryResolver{r} }
+func (r *Resolver) UsersQuery() graphql.UsersQueryResolver { return &usersQueryResolver{r} }
 
 type usersQueryResolver struct{ *Resolver }
